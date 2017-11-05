@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Heavy</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TaskViewController" customModule="Demo" customModuleProvider="target">
+            <connections>
+                <outlet property="searchBar" destination="aNx-RB-zgh" id="tcu-ct-tTn"/>
+                <outlet property="tasksListTableView" destination="t44-wJ-MvK" id="uvu-ri-6Zg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mIe-3l-FLc">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzm-ci-MLo">
+                            <rect key="frame" x="123.5" y="35" width="74.5" height="26"/>
+                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="19"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HM4-bB-Ig9">
+                            <rect key="frame" x="8" y="30.5" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="dBm-L7-qTC"/>
+                                <constraint firstAttribute="width" constant="35" id="i8h-es-afF"/>
+                            </constraints>
+                            <state key="normal" image="back-icon"/>
+                            <connections>
+                                <action selector="returnBack:" destination="-1" eventType="touchUpInside" id="1hg-Cc-UrD"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8c-5O-Fp5">
+                            <rect key="frame" x="277" y="33" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="fbR-d6-ult"/>
+                                <constraint firstAttribute="height" constant="35" id="oVk-a5-ZhD"/>
+                            </constraints>
+                            <state key="normal" image="add-icon"/>
+                            <connections>
+                                <action selector="addNewToDo:" destination="-1" eventType="touchUpInside" id="jl3-75-COp"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abo-Iu-xhC">
+                            <rect key="frame" x="237" y="33" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="TUD-oC-cKq"/>
+                                <constraint firstAttribute="height" constant="35" id="bnw-sV-tGh"/>
+                            </constraints>
+                            <state key="normal" image="sort-icon"/>
+                            <connections>
+                                <action selector="sortData:" destination="-1" eventType="touchUpInside" id="3sq-rg-Juv"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.08235294118" green="0.50980392159999999" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="p8c-5O-Fp5" firstAttribute="leading" secondItem="abo-Iu-xhC" secondAttribute="trailing" constant="5" id="1Aa-Vs-0ww"/>
+                        <constraint firstAttribute="bottom" secondItem="p8c-5O-Fp5" secondAttribute="bottom" constant="13" id="KLR-o5-PlP"/>
+                        <constraint firstAttribute="height" constant="81" id="R3H-J8-qf0"/>
+                        <constraint firstItem="abo-Iu-xhC" firstAttribute="centerY" secondItem="p8c-5O-Fp5" secondAttribute="centerY" id="R7o-Yn-Sc9"/>
+                        <constraint firstItem="HM4-bB-Ig9" firstAttribute="leading" secondItem="mIe-3l-FLc" secondAttribute="leading" constant="8" id="bbZ-24-yMi"/>
+                        <constraint firstAttribute="trailing" secondItem="p8c-5O-Fp5" secondAttribute="trailing" constant="8" id="dhT-cu-gJN"/>
+                        <constraint firstItem="Dzm-ci-MLo" firstAttribute="centerX" secondItem="mIe-3l-FLc" secondAttribute="centerX" id="efO-49-Co1"/>
+                        <constraint firstAttribute="bottom" secondItem="Dzm-ci-MLo" secondAttribute="bottom" constant="20" id="jIz-fg-mHq"/>
+                        <constraint firstItem="HM4-bB-Ig9" firstAttribute="centerY" secondItem="Dzm-ci-MLo" secondAttribute="centerY" id="zoB-Io-eiG"/>
+                    </constraints>
+                </view>
+                <searchBar contentMode="redraw" placeholder="Search Task" translatesAutoresizingMaskIntoConstraints="NO" id="aNx-RB-zgh">
+                    <rect key="frame" x="0.0" y="81" width="320" height="56"/>
+                    <color key="barTintColor" red="0.08235294118" green="0.50980392159999999" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="m5J-kh-8YP"/>
+                    </connections>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t44-wJ-MvK">
+                    <rect key="frame" x="0.0" y="137" width="320" height="431"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="aNh-o7-T7w"/>
+                        <outlet property="delegate" destination="-1" id="rwb-2J-df1"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="mIe-3l-FLc" secondAttribute="trailing" id="2QC-B7-kqH"/>
+                <constraint firstAttribute="trailing" secondItem="aNx-RB-zgh" secondAttribute="trailing" id="9Lv-WH-HYW"/>
+                <constraint firstItem="aNx-RB-zgh" firstAttribute="top" secondItem="mIe-3l-FLc" secondAttribute="bottom" id="EFW-xK-kOb"/>
+                <constraint firstAttribute="bottom" secondItem="t44-wJ-MvK" secondAttribute="bottom" id="Tcd-Q4-TfH"/>
+                <constraint firstItem="mIe-3l-FLc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ZWD-hg-zcc"/>
+                <constraint firstItem="t44-wJ-MvK" firstAttribute="top" secondItem="aNx-RB-zgh" secondAttribute="bottom" id="cQr-sO-ZYO"/>
+                <constraint firstAttribute="trailing" secondItem="t44-wJ-MvK" secondAttribute="trailing" id="dcV-oQ-ALK"/>
+                <constraint firstItem="aNx-RB-zgh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dn1-Ya-ret"/>
+                <constraint firstItem="mIe-3l-FLc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mXb-Az-YEs"/>
+                <constraint firstItem="t44-wJ-MvK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rDi-aq-Lye"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="add-icon" width="37" height="37"/>
+        <image name="back-icon" width="37" height="37"/>
+        <image name="sort-icon" width="37" height="37"/>
+    </resources>
+</document>

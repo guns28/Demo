@@ -1,0 +1,12 @@
+/* 
+  localizable.strings
+  Demo
+
+  Created by Ahmed Karmous on 10/05/2017.
+  Copyright © 2017 Ahmed Karmous. All rights reserved.
+*/
+
+
+/* First Slide */
+
+"ask_habit" = "Ask if I did my habits at :";
